@@ -1,0 +1,125 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: CalculatorApp(),
+  ));
+}
+
+class CalculatorApp extends StatefulWidget {
+  @override
+  CalculatorAppState createState() => CalculatorAppState();
+}
+
+class CalculatorAppState extends State<CalculatorApp> {
+  double operand1 = 0.0;
+  double operand2 = 0.0;
+  String operation;
+  String calculation = "0";
+
+  void onPressOfButton(String text) {
+    //Por hacer
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Card(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+                padding: EdgeInsets.all(16),
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(calculation, style: TextStyle(fontSize: 30)),
+                )),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  //Componente boton
+                  Container(
+                      padding: EdgeInsets.all(2.0),
+                      child: RaisedButton(
+                        child: Text(
+                          "Suma",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        color: Colors.red,
+                        onPressed: () {},
+                      )),
+                  //Componente boton
+                  Container(
+                      padding: EdgeInsets.all(2.0),
+                      child: RaisedButton(
+                        child: Text(
+                          "Resta",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        color: Colors.red,
+                        onPressed: () {},
+                      )),
+
+                  //Componente boton
+                  Container(
+                      padding: EdgeInsets.all(2.0),
+                      child: RaisedButton(
+                        child: Text(
+                          "Multiplicación",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        color: Colors.red,
+                        onPressed: () {},
+                      )),
+
+                  //Componente boton
+                  Container(
+                      padding: EdgeInsets.all(2.0),
+                      child: RaisedButton(
+                        child: Text(
+                          "Division",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        color: Colors.black,
+                        onPressed: () {},
+                      )),
+//Componente boton
+                  Container(
+                      padding: EdgeInsets.all(2.0),
+                      child: RaisedButton(
+                        child: Text(
+                          "0",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        color: Colors.green,
+                        onPressed: () {},
+                      )),
+//Componente boton
+                  Container(
+                      padding: EdgeInsets.all(2.0),
+                      child: RaisedButton(
+                        child: Text(
+                          "=",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        color: Colors.blue,
+                        onPressed: () {},
+                      )),
+//Componente boton
+                  Container(
+                      padding: EdgeInsets.all(2.0),
+                      child: RaisedButton(
+                        child: Text(
+                          "C",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        color: Colors.pink,
+                        onPressed: () {},
+                      )),
+                ]),
+          ],
+        ),
+      ),
+    );
+  }
+}
